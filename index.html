@@ -97,6 +97,14 @@
       background-position: center;
       color: white;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    #home .logo-grande {
+      width: 200px;
+      height: auto;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
     }
 
     #home h1 {
@@ -307,7 +315,7 @@
 <body>
   <!-- Header con logo y menú -->
   <header>
-    <img src="logo.jpg" alt="Logo de la Institución" class="logo">
+    <img src="https://via.placeholder.com/150x50/004aad/ffffff?text=LOGO" alt="Logo de la Institución" class="logo">
     <nav>
       <a href="#home">Inicio</a>
       <a href="#sobre">Sobre Nosotros</a>
@@ -320,7 +328,8 @@
   <main>
     <!-- Layout 1: Hero con logo y foto de niños -->
     <section id="home">
-      <h1>Bienvenido a la Institución Apapacho México IAP</h1>
+      <img src="logo.jpg" alt="Logo de la Institución" class="logo-grande">
+      <h1>Institución Apapacho México IAP</h1>
       <p>Promoviendo la seguridad y educación de niños y adolescentes para transformar el futuro.</p>
       <button onclick="scrollToSection('contato')">Contáctanos</button>
     </section>
@@ -335,7 +344,7 @@
           <p>Trabajamos en colaboración con instituciones educativas, familias y comunidades para construir una sociedad más justa y protectora.</p>
         </div>
         <div class="sobre-imagen">
-          <img src="instituicao.jpg" alt="Imagen de la Institución">
+          <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Imagen de la Institución">
         </div>
       </div>
     </section>
