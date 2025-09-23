@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Institución Apapacho México IAP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Estilos generales */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+      color: #004aad;
+    }
+
+    p {
+      margin-bottom: 15px;
+      max-width: 800px;
+    }
+
+    button {
+      padding: 12px 30px;
+      background: #004aad;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background: #0066ff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #004aad;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0066ff;
+    }
+
+    /* Layout 1: Hero con logo y foto de niños */
+    #home {
+      background: linear-gradient(rgba(0, 74, 173, 0.7), rgba(0, 102, 255, 0.7)), url('https://images.unsplash.com/photo-1491895200221-4e7a2d4d0e0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    #home h1 {
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    /* Layout 2: Sobre Nosotros */
+    #sobre {
+      background-color: #f9f9f9;
+      padding: 100px 20px;
+    }
+
+    .sobre-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      max-width: 1200px;
+    }
+
+    .sobre-texto {
+      flex: 1;
+      min-width: 300px;
+      text-align: left;
+    }
+
+    .sobre-imagen {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .sobre-imagen img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Layout 3: Concientización */
+    #servicios {
+      background: linear-gradient(rgba(0, 74, 173, 0.8), rgba(0, 102, 255, 0.8)), url('https://images.unsplash.com/photo-1516627145497-ae69578d5d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .servicios-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin-top: 30px;
+    }
+
+    .servicio-card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px 20px;
+      border-radius: 10px;
+      color: #333;
+      text-shadow: none;
+      transition: transform 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .servicio-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .servicio-card h3 {
+      color: #004aad;
+      margin-bottom: 15px;
+    }
+
+    /* Layout 4: Contacto */
+    #contato {
+      background-color: #f0f7ff;
+    }
+
+    .contacto-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin-top: 30px;
+    }
+
+    .info-contacto {
+      flex: 1;
+      min-width: 300px;
+      text-align: left;
+    }
+
+    .info-contacto p {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .info-contacto i {
+      margin-right: 10px;
+      color: #004aad;
+      font-size: 1.2rem;
+    }
+
+    .formulario-contacto {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    .redes-sociales {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .redes-sociales a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: #004aad;
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .redes-sociales a:hover {
+      background: #0066ff;
+      transform: translateY(-3px);
+    }
+
+    iframe {
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer */
+    footer {
+      background: #004aad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 10px;
+      }
+      
+      nav {
+        margin-top: 10px;
+      }
+      
+      nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+      }
+      
+      #home h1 {
+        font-size: 2rem;
+      }
+      
+      section {
+        padding: 100px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header con logo y menú -->
+  <header>
+    <img src="logo.jpg" alt="Logo de la Institución" class="logo">
+    <nav>
+      <a href="#home">Inicio</a>
+      <a href="#sobre">Sobre Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contato">Contacto</a>
+      <a href="#donar">Donar</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Layout 1: Hero con logo y foto de niños -->
+    <section id="home">
+      <h1>Bienvenido a la Institución Apapacho México IAP</h1>
+      <p>Promoviendo la seguridad y educación de niños y adolescentes para transformar el futuro.</p>
+      <button onclick="scrollToSection('contato')">Contáctanos</button>
+    </section>
+
+    <!-- Layout 2: Sobre Nosotros -->
+    <section id="sobre">
+      <h2>Sobre Nosotros</h2>
+      <div class="sobre-container">
+        <div class="sobre-texto">
+          <p>Somos una Asociación Civil, fundada en 2017, que aplica programas de prevención de violencia y abuso sexual a nivel primaria, secundaria y preparatoria.</p>
+          <p>Nuestra misión es crear entornos seguros para la niñez y adolescencia, a través de programas educativos que fomenten la prevención y el desarrollo integral.</p>
+          <p>Trabajamos en colaboración con instituciones educativas, familias y comunidades para construir una sociedad más justa y protectora.</p>
+        </div>
+        <div class="sobre-imagen">
+          <img src="instituicao.jpg" alt="Imagen de la Institución">
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout 3: Concientización -->
+    <section id="servicios">
+      <h2>Concientización y Servicios</h2>
+      <p>Nuestros programas están diseñados para empoderar a niños, adolescentes, padres y educadores con herramientas para prevenir la violencia y el abuso sexual.</p>
+      
+      <div class="servicios-container">
+        <div class="servicio-card">
+          <h3>Guía para Padres</h3>
+          <p>Información y recursos para que las familias puedan identificar situaciones de riesgo y proteger a sus hijos.</p>
+          <button>Más información</button>
+        </div>
+        
+        <div class="servicio-card">
+          <h3>Guía para Maestros</h3>
+          <p>Material educativo y estrategias para implementar en el aula que promuevan la seguridad y el respeto.</p>
+          <button>Más información</button>
+        </div>
+        
+        <div class="servicio-card">
+          <h3>Historias Conmovedoras</h3>
+          <p>Testimonios reales que inspiran y demuestran la importancia de nuestra labor.</p>
+          <button>Más información</button>
+        </div>
+        
+        <div class="servicio-card">
+          <h3>Todo lo que debes saber</h3>
+          <p>Información completa sobre prevención, detección y acción frente al abuso sexual infantil.</p>
+          <button>Más información</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout 4: Contacto -->
+    <section id="contato">
+      <h2>Contacto</h2>
+      <div class="contacto-container">
+        <div class="info-contacto">
+          <p><i class="fas fa-envelope"></i> Correo: asosiacionapapachomexicoiap@gmail.com</p>
+          <p><i class="fas fa-phone"></i> Teléfono: +52 722 289 8052</p>
+          <p><i class="fas fa-map-marker-alt"></i> Dirección: [Inserte dirección aquí]</p>
+          
+          <div class="redes-sociales">
+            <a href="https://www.facebook.com/share/16eWnUNwJC/?mibextid=wwXIfr" target="_blank" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/asociacionapapacho?igsh=MWx2NWxiODcyM29tNA==" target="_blank" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="formulario-contacto">
+          <form onsubmit="enviarFormulario(event)">
+            <input type="text" placeholder="Su nombre" required>
+            <input type="email" placeholder="Su correo" required>
+            <textarea placeholder="Su mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+      
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.888614583064!2d-99.1699492845931!3d19.427020746202365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses!2smx!4v1645567892341!5m2!1ses!2smx" 
+        width="100%" height="250" style="border:0;" allowfullscreen loading="lazy">
+      </iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Institución Apapacho México IAP</p>
+    <a href="noticias.html">Noticias</a> | 
+    <a href="blog.html">Blog</a>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+
+    function enviarFormulario(event) {
+      event.preventDefault();
+      alert("¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.");
+      event.target.reset();
+    }
+
+    // Efecto de header al hacer scroll
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.style.padding = '10px 30px';
+        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+      } else {
+        header.style.padding = '15px 30px';
+        header.style.boxShadow = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
