@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova Apapacho - Centro de Rehabilitación</title>
+    <title>Nova Apapacho - Prevención de Violencia y Abuso Sexual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Variables de colores basadas en el logo */
         :root {
-            --primary: #004aad; /* Azul principal */
-            --secondary: #ff6b6b; /* Rojo/Naranja */
-            --accent: #4ecdc4; /* Verde azulado */
-            --light: #f7f9fc; /* Fondo claro */
-            --dark: #2d3748; /* Texto oscuro */
+            --primary: #1a4b8c; /* Azul principal */
+            --secondary: #e63946; /* Rojo/Naranja */
+            --accent: #2a9d8f; /* Verde azulado */
+            --light: #f1faee; /* Fondo claro */
+            --dark: #1d3557; /* Texto oscuro */
             --white: #ffffff;
         }
         
@@ -24,7 +27,7 @@
         }
         
         body {
-            font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             line-height: 1.6;
             color: var(--dark);
             background-color: var(--light);
@@ -32,19 +35,32 @@
         }
         
         h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--primary);
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
         
         h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-align: center;
             margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 10px auto;
+            border-radius: 2px;
         }
         
         p {
@@ -74,6 +90,7 @@
             border: none;
             cursor: pointer;
             font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
         }
         
         .btn:hover {
@@ -106,13 +123,14 @@
         }
         
         .logo img {
-            height: 60px;
-            margin-right: 10px;
+            height: 70px;
+            margin-right: 15px;
         }
         
         .logo-text {
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: var(--primary);
         }
         
@@ -130,6 +148,8 @@
             color: var(--dark);
             font-weight: 600;
             transition: color 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
         }
         
         nav ul li a:hover {
@@ -144,18 +164,18 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 74, 173, 0.8), rgba(0, 74, 173, 0.9)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(26, 75, 140, 0.9)), url('https://images.unsplash.com/photo-1491895200221-4e7a2d4d0e0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
             background-size: cover;
             background-position: center;
             color: var(--white);
             text-align: center;
-            padding: 10rem 1rem;
+            padding: 12rem 1rem;
             margin-top: 80px;
         }
         
         .hero h1 {
             color: var(--white);
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1.5rem;
         }
         
@@ -166,10 +186,17 @@
         }
         
         .slogan {
-            font-style: italic;
-            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
             margin: 2rem 0;
             color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .large-logo {
+            width: 250px;
+            margin: 0 auto 2rem;
+            display: block;
         }
         
         /* About Section */
@@ -241,6 +268,10 @@
             color: var(--white);
         }
         
+        .testimonials h2:after {
+            background: var(--light);
+        }
+        
         .testimonial-slider {
             max-width: 800px;
             margin: 0 auto;
@@ -256,6 +287,7 @@
         .testimonial-text {
             font-style: italic;
             margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
         
         .testimonial-author {
@@ -316,6 +348,7 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
+            font-family: 'Poppins', sans-serif;
         }
         
         .form-group input,
@@ -349,6 +382,7 @@
         .footer-section h3 {
             color: var(--white);
             margin-bottom: 1.5rem;
+            font-family: 'Poppins', sans-serif;
         }
         
         .footer-section ul {
@@ -415,6 +449,7 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            font-family: 'Poppins', sans-serif;
         }
         
         /* Responsive Design */
@@ -458,6 +493,10 @@
             .hero p {
                 font-size: 1.1rem;
             }
+            
+            .large-logo {
+                width: 200px;
+            }
         }
     </style>
 </head>
@@ -488,19 +527,20 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="container">
+            <img src="https://s11.aconvert.com/convert/p3r68-cdx67/dekg2-kftx0.jpg" alt="Logo Nova Apapacho" class="large-logo">
             <h1>Nova Apapacho</h1>
-            <p class="slogan">Renace, Recupera, Revive</p>
-            <p>Un espacio seguro donde la esperanza y la recuperación se encuentran. Brindamos apoyo integral para tu bienestar emocional y mental.</p>
-            <a href="#contacto" class="btn">Solicitar Información</a>
+            <p class="slogan">Creando entornos seguros para la niñez y adolescencia</p>
+            <p>Programas educativos de prevención de violencia y abuso sexual para primaria, secundaria y preparatoria.</p>
+            <a href="#contacto" class="btn">Únete a Nuestra Misión</a>
         </div>
     </section>
 
     <!-- Motivational Quotes -->
     <section class="motivational-quotes">
         <div class="container">
-            <div class="quote">"El viaje más importante es el que nos lleva a nosotros mismos"</div>
-            <div class="quote">"Cada día es una nueva oportunidad para cambiar tu vida"</div>
-            <div class="quote">"La recuperación no es un destino, es un camino que se recorre paso a paso"</div>
+            <div class="quote">"La prevención es la mejor protección para nuestra niñez"</div>
+            <div class="quote">"Juntos podemos crear entornos seguros donde cada niño pueda crecer sin miedo"</div>
+            <div class="quote">"Educar para prevenir es sembrar semillas de un futuro más seguro"</div>
         </div>
     </section>
 
@@ -510,13 +550,13 @@
             <h2>Sobre Nova Apapacho</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Nova Apapacho es un centro de rehabilitación integral dedicado a brindar apoyo especializado para la recuperación de adicciones y problemas de salud mental. Nuestro enfoque se basa en el respeto, la empatía y la comprensión.</p>
-                    <p>Contamos con un equipo multidisciplinario de profesionales altamente capacitados que trabajan juntos para ofrecer un tratamiento personalizado y efectivo.</p>
-                    <p>Nuestra misión es guiar a cada persona en su proceso de recuperación, ayudándoles a redescubrir su valor y potencial para construir una vida plena y significativa.</p>
-                    <a href="#servicios" class="btn">Conoce Nuestros Servicios</a>
+                    <p>Nova Apapacho es una institución dedicada a la prevención de violencia y abuso sexual a nivel primaria, secundaria y preparatoria. Nuestra misión es crear entornos seguros para la niñez y adolescencia, a través de programas educativos que fomenten la prevención y el desarrollo integral.</p>
+                    <p>Trabajamos en colaboración con instituciones educativas, familias y comunidades para construir una sociedad más justa y protectora, donde cada niño y adolescente pueda desarrollarse plenamente.</p>
+                    <p>Nuestro enfoque se basa en la educación preventiva, el empoderamiento de los jóvenes y la creación de redes de apoyo que garanticen su bienestar y seguridad.</p>
+                    <a href="#servicios" class="btn">Conoce Nuestros Programas</a>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Centro de rehabilitación Nova Apapacho">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Niños en ambiente educativo seguro">
                 </div>
             </div>
         </div>
@@ -525,49 +565,49 @@
     <!-- Services Section -->
     <section id="servicios" class="services">
         <div class="container">
-            <h2>Nuestros Servicios</h2>
+            <h2>Nuestros Programas y Servicios</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-user-md"></i>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Evaluación Integral</h3>
-                    <p>Evaluación personalizada para determinar el plan de tratamiento más adecuado para cada individuo.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hand-holding-heart"></i>
-                    </div>
-                    <h3>Terapia Individual</h3>
-                    <p>Sesiones personalizadas con profesionales especializados para trabajar en el proceso de recuperación.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Terapia Grupal</h3>
-                    <p>Espacios de apoyo mutuo donde los participantes comparten experiencias y estrategias de recuperación.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Internamiento</h3>
-                    <p>Programa residencial que proporciona un ambiente estructurado y de apoyo las 24 horas.</p>
+                    <h3>Prevención de Violencia</h3>
+                    <p>Programas educativos para identificar y prevenir situaciones de violencia en el entorno escolar y familiar.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-heart"></i>
                     </div>
-                    <h3>Terapia Familiar</h3>
-                    <p>Involucramos a la familia en el proceso de recuperación para fortalecer el sistema de apoyo.</p>
+                    <h3>Prevención de Abuso Sexual</h3>
+                    <p>Talleres y materiales educativos para enseñar a niños y adolescentes a reconocer y reportar situaciones de abuso.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-seedling"></i>
+                        <i class="fas fa-chalkboard-teacher"></i>
                     </div>
-                    <h3>Actividades Recreativas</h3>
-                    <p>Programa de actividades que promueven el desarrollo de hobbies y habilidades saludables.</p>
+                    <h3>Capacitación para Educadores</h3>
+                    <p>Formación especializada para maestros y personal educativo en detección y prevención de violencia.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Talleres para Familias</h3>
+                    <p>Espacios de aprendizaje para padres y cuidadores sobre cómo proteger y educar a sus hijos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Acompañamiento Psicológico</h3>
+                    <p>Soporte emocional y psicológico para niños y adolescentes que han vivido situaciones de violencia.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Desarrollo de Habilidades</h3>
+                    <p>Programas para fortalecer la autoestima, asertividad y resiliencia en niños y adolescentes.</p>
                 </div>
             </div>
         </div>
@@ -576,19 +616,19 @@
     <!-- Testimonials Section -->
     <section id="testimonios" class="testimonials">
         <div class="container">
-            <h2>Testimonios de Recuperación</h2>
+            <h2>Testimonios</h2>
             <div class="testimonial-slider">
                 <div class="testimonial">
-                    <p class="testimonial-text">"Nova Apapacho me dio las herramientas para reconstruir mi vida. Hoy soy una persona nueva, llena de esperanza y propósito."</p>
-                    <p class="testimonial-author">- Alejandro M.</p>
+                    <p class="testimonial-text">"Los talleres de Nova Apapacho han transformado nuestra escuela. Los niños ahora saben identificar situaciones de riesgo y pedir ayuda."</p>
+                    <p class="testimonial-author">- Directora de Primaria</p>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-text">"El apoyo del equipo y la comprensión de otros en recuperación hicieron la diferencia en mi proceso. Gracias por devolverme la vida."</p>
-                    <p class="testimonial-author">- María L.</p>
+                    <p class="testimonial-text">"Como madre, los talleres me dieron herramientas para hablar con mis hijos sobre su seguridad corporal de manera natural y sin miedo."</p>
+                    <p class="testimonial-author">- Madre de familia</p>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-text">"No solo me ayudaron a superar mi adicción, sino que me enseñaron a vivir de manera plena y significativa. Estoy eternamente agradecido."</p>
-                    <p class="testimonial-author">- Roberto G.</p>
+                    <p class="testimonial-text">"Gracias a lo que aprendí en los talleres, pude ayudar a un compañero que estaba sufriendo acoso escolar. Nova Apapacho salva vidas."</p>
+                    <p class="testimonial-author">- Estudiante de secundaria</p>
                 </div>
             </div>
         </div>
@@ -600,11 +640,12 @@
             <h2>Nuestra Ubicación</h2>
             <div class="location-content">
                 <div class="location-info">
-                    <p>Nuestro centro está estratégicamente ubicado en un entorno tranquilo y natural, ideal para el proceso de recuperación.</p>
-                    <p><strong>Dirección:</strong> Calle Rehabilitación #123, Col. Esperanza, Ciudad de México</p>
+                    <p>Nuestro equipo trabaja directamente en las instituciones educativas y comunidades que requieren nuestros servicios de prevención.</p>
+                    <p><strong>Oficina central:</strong> Calle Prevención #123, Col. Seguridad, Ciudad de México</p>
                     <p><strong>Teléfono:</strong> (55) 1234-5678</p>
+                    <p><strong>Email:</strong> info@novaapapacho.org</p>
                     <p><strong>Horario de atención:</strong> Lunes a Viernes de 9:00 am a 6:00 pm</p>
-                    <a href="#contacto" class="btn">Agendar una Visita</a>
+                    <a href="#contacto" class="btn">Solicita una Visita</a>
                 </div>
                 <div class="location-map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.888614583064!2d-99.1699492845931!3d19.427020746202365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses!2smx!4v1645567892341!5m2!1ses!2smx" allowfullscreen="" loading="lazy"></iframe>
@@ -619,10 +660,10 @@
             <h2>Contacto</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <p>Estamos aquí para ayudarte. Contáctanos para obtener más información sobre nuestros programas o para agendar una evaluación inicial.</p>
+                    <p>¿Te interesa llevar nuestros programas a tu escuela o comunidad? Contáctanos para obtener más información.</p>
                     <p><strong>Teléfono:</strong> (55) 1234-5678</p>
-                    <p><strong>Email:</strong> info@novaapapacho.com</p>
-                    <p><strong>Dirección:</strong> Calle Rehabilitación #123, Col. Esperanza, Ciudad de México</p>
+                    <p><strong>Email:</strong> info@novaapapacho.org</p>
+                    <p><strong>Dirección:</strong> Calle Prevención #123, Col. Seguridad, Ciudad de México</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -641,8 +682,8 @@
                             <input type="email" id="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Teléfono</label>
-                            <input type="tel" id="phone">
+                            <label for="institution">Institución o Escuela</label>
+                            <input type="text" id="institution">
                         </div>
                         <div class="form-group">
                             <label for="message">Mensaje</label>
@@ -661,7 +702,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Nova Apapacho</h3>
-                    <p>Centro de rehabilitación integral dedicado a brindar apoyo especializado para la recuperación de adicciones y problemas de salud mental.</p>
+                    <p>Prevención de violencia y abuso sexual para primaria, secundaria y preparatoria. Creando entornos seguros para la niñez y adolescencia.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Enlaces Rápidos</h3>
@@ -669,19 +710,20 @@
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#nosotros">Nosotros</a></li>
                         <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
                         <li><a href="#ubicacion">Ubicación</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Contacto</h3>
-                    <p>Calle Rehabilitación #123, Col. Esperanza, Ciudad de México</p>
+                    <p>Calle Prevención #123, Col. Seguridad, Ciudad de México</p>
                     <p>Tel: (55) 1234-5678</p>
-                    <p>Email: info@novaapapacho.com</p>
+                    <p>Email: info@novaapapacho.org</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Nova Apapacho - Centro de Rehabilitación. Todos los derechos reservados.</p>
+                <p>&copy; 2023 Nova Apapacho - Prevención de Violencia y Abuso Sexual. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -714,7 +756,7 @@
         // Form submission
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+            alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto para coordinar nuestros programas de prevención.');
             this.reset();
         });
     </script>
