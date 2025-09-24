@@ -9,14 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Variables de colores basadas en el logo */
+        /* Nueva paleta de colores para la institución */
         :root {
-            --primary: #1a4b8c; /* Azul principal */
-            --secondary: #e63946; /* Rojo/Naranja */
-            --accent: #2a9d8f; /* Verde azulado */
-            --light: #f1faee; /* Fondo claro */
-            --dark: #1d3557; /* Texto oscuro */
+            --primary: #1e3a8a; /* Azul principal más intenso */
+            --secondary: #dc2626; /* Rojo vibrante */
+            --accent: #059669; /* Verde esmeralda */
+            --light: #f0f9ff; /* Azul muy claro */
+            --dark: #1e293b; /* Azul oscuro para texto */
             --white: #ffffff;
+            --light-blue: #e0f2fe; /* Azul claro para fondos */
         }
         
         /* Estilos generales */
@@ -162,9 +163,9 @@
             cursor: pointer;
         }
         
-        /* Hero Section */
+        /* Hero Section con nueva imagen de fondo */
         .hero {
-            background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(26, 75, 140, 0.9)), url('https://images.unsplash.com/photo-1491895200221-4e7a2d4d0e0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
+            background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.8)), url('https://s10.aconvert.com/convert/p3r68-cdx67/asvsd-iktvp.jpg');
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -229,7 +230,7 @@
         
         /* Services Section */
         .services {
-            background-color: var(--light);
+            background-color: var(--light-blue);
         }
         
         .services-grid {
@@ -324,7 +325,7 @@
         
         /* Contact Section */
         .contact {
-            background-color: var(--light);
+            background-color: var(--light-blue);
         }
         
         .contact-content {
@@ -452,6 +453,37 @@
             font-family: 'Poppins', sans-serif;
         }
         
+        /* Nueva sección final con logo y imagen de fondo */
+        .final-section {
+            background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.8)), url('https://s11.aconvert.com/convert/p3r68-cdx67/lz0ug-mdogn.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 8rem 1rem;
+        }
+        
+        .final-logo {
+            width: 200px;
+            margin: 0 auto 2rem;
+            display: block;
+        }
+        
+        .final-section h2 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .final-section h2:after {
+            background: var(--accent);
+        }
+        
+        .final-section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .menu-toggle {
@@ -494,8 +526,12 @@
                 font-size: 1.1rem;
             }
             
-            .large-logo {
+            .large-logo, .final-logo {
                 width: 200px;
+            }
+            
+            .hero, .final-section {
+                padding: 8rem 1rem;
             }
         }
     </style>
@@ -693,6 +729,16 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección final -->
+    <section class="final-section">
+        <div class="container">
+            <img src="https://s11.aconvert.com/convert/p3r68-cdx67/dekg2-kftx0.jpg" alt="Logo Nova Apapacho" class="final-logo">
+            <h2>Juntos por un Futuro Seguro</h2>
+            <p>En Nova Apapacho creemos que cada niño y adolescente merece crecer en un entorno libre de violencia y abuso. Únete a nuestra misión de crear espacios seguros donde puedan desarrollarse plenamente.</p>
+            <a href="#contacto" class="btn">Contáctanos</a>
         </div>
     </section>
 
