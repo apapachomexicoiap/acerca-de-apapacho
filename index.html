@@ -500,6 +500,62 @@
             max-width: 800px;
             margin: 0 auto 2rem;
         }
+
+        /* Sección de Redes Sociales */
+        .social-section {
+            background-color: var(--light-orange);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .social-section h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .social-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--dark);
+            transition: transform 0.3s ease;
+        }
+
+        .social-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .social-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icon i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .social-name {
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
         
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -550,6 +606,11 @@
             .hero, .final-section {
                 padding: 8rem 1rem;
             }
+
+            .social-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -558,7 +619,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="/imagenes_pagina/logo2.png" alt="Logo Nova Apapacho">
+                <img src="imagenes_pagina/logo2.png" alt="Logo Nova Apapacho">
                 <div class="logo-text">Nova Apapacho</div>
             </div>
             <div class="menu-toggle">
@@ -580,7 +641,7 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="container">
-            <img src="/imagenes_pagina/imagem1.png" alt="Logo Nova Apapacho" class="large-logo">
+            <img src="imagenes_pagina/imagem1.png" alt="Logo Nova Apapacho" class="large-logo">
             <h1>Nova Apapacho</h1>
             <p class="slogan">Creando entornos seguros para la niñez y adolescencia</p>
             <p>Programas educativos de prevención de violencia y abuso sexual para primaria, secundaria y preparatoria.</p>
@@ -687,6 +748,33 @@
         </div>
     </section>
 
+    <!-- Sección de Redes Sociales -->
+    <section class="social-section">
+        <div class="container">
+            <h2>Síguenos en Nuestras Redes Sociales</h2>
+            <div class="social-container">
+                <a href="https://www.facebook.com/share/1F4QJFfvfo/?mibextid=wwXIfr" class="social-item" target="_blank">
+                    <div class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <span class="social-name">Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/asociacionapapacho?igsh=MWx2NWxiODcyM29tNA==" class="social-item" target="_blank">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span class="social-name">Instagram</span>
+                </a>
+                <a href="https://youtube.com/@asociacionapapacho3048?feature=shared" class="social-item" target="_blank">
+                    <div class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <span class="social-name">YouTube</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Location Section -->
     <section id="ubicacion" class="location">
         <div class="container">
@@ -716,9 +804,9 @@
                     <p><strong>Teléfono:</strong> +52 722 289 8052</p>
                     <p><strong>Correo:</strong> asociacionapapachomexico@gmail.com</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/share/1F4QJFfvfo/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/asociacionapapacho?igsh=MWx2NWxiODcyM29tNA==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@asociacionapapacho3048?feature=shared" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
