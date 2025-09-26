@@ -619,7 +619,8 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="imagenes_pagina/logo2.png" alt="Logo Nova Apapacho">
+                <!-- Imagem temporária até você fazer upload da sua imagem -->
+                <img src="https://via.placeholder.com/70x70/1e3a8a/ffffff?text=LOGO" alt="Logo Nova Apapacho">
                 <div class="logo-text">Nova Apapacho</div>
             </div>
             <div class="menu-toggle">
@@ -641,7 +642,8 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="container">
-            <img src="imagenes_pagina/imagem1.png" alt="Logo Nova Apapacho" class="large-logo">
+            <!-- Imagem temporária até você fazer upload da sua imagem -->
+            <img src="https://via.placeholder.com/300x150/1e3a8a/ffffff?text=Nova+Apapacho" alt="Logo Nova Apapacho" class="large-logo">
             <h1>Nova Apapacho</h1>
             <p class="slogan">Creando entornos seguros para la niñez y adolescencia</p>
             <p>Programas educativos de prevención de violencia y abuso sexual para primaria, secundaria y preparatoria.</p>
@@ -905,6 +907,17 @@
             e.preventDefault();
             alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto para coordinar nuestros programas de prevención.');
             this.reset();
+        });
+
+        // Fallback para imágenes que não carregam
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.onerror = function() {
+                    console.log('Imagem não carregada: ' + this.src);
+                    // Você pode adicionar um fallback aqui se necessário
+                };
+            });
         });
     </script>
 </body>
