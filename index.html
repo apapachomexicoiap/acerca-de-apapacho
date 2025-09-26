@@ -18,6 +18,8 @@
             --dark: #1e293b; /* Azul oscuro para texto */
             --white: #ffffff;
             --light-blue: #e0f2fe; /* Azul claro para fondos */
+            --light-orange: #ffedd5; /* Laranja claro para o hero */
+            --orange: #ea580c; /* Laranja principal */
         }
         
         /* Estilos generales */
@@ -163,41 +165,56 @@
             cursor: pointer;
         }
         
-        /* Hero Section con nueva imagen de fondo */
+        /* Hero Section modificada - Laranja claro com imagem de fundo */
         .hero {
-            background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.8)), url('https://s10.aconvert.com/convert/p3r68-cdx67/asvsd-iktvp.jpg');
+            background: linear-gradient(rgba(255, 237, 213, 0.9), rgba(255, 237, 213, 0.95)), url('https://s10.aconvert.com/convert/p3r68-cdx67/asvsd-iktvp.jpg');
             background-size: cover;
             background-position: center;
-            color: var(--white);
+            color: var(--dark);
             text-align: center;
             padding: 12rem 1rem;
             margin-top: 80px;
         }
         
         .hero h1 {
-            color: var(--white);
+            color: var(--orange);
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
         
         .hero p {
             font-size: 1.3rem;
             max-width: 800px;
             margin: 0 auto 2rem;
+            color: var(--dark);
         }
         
         .slogan {
             font-family: 'Poppins', sans-serif;
             font-size: 1.8rem;
             margin: 2rem 0;
-            color: var(--accent);
+            color: var(--primary);
             font-weight: 600;
         }
         
         .large-logo {
-            width: 250px;
+            max-width: 300px;
             margin: 0 auto 2rem;
             display: block;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Botão especial para o hero */
+        .hero .btn {
+            background-color: var(--orange);
+            font-size: 1.1rem;
+            padding: 15px 35px;
+        }
+        
+        .hero .btn:hover {
+            background-color: var(--primary);
         }
         
         /* About Section */
@@ -563,7 +580,7 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="container">
-            <img src="/imagenes_pagina/imagem1.png" alt="Logo Nova Apapacho" class="max-h-full max-w-full object-contain rounded-xl">
+            <img src="/imagenes_pagina/imagem1.png" alt="Logo Nova Apapacho" class="large-logo">
             <h1>Nova Apapacho</h1>
             <p class="slogan">Creando entornos seguros para la niñez y adolescencia</p>
             <p>Programas educativos de prevención de violencia y abuso sexual para primaria, secundaria y preparatoria.</p>
@@ -699,9 +716,9 @@
                     <p><strong>Teléfono:</strong> +52 722 289 8052</p>
                     <p><strong>Correo:</strong> asociacionapapachomexico@gmail.com</p>
                     <div class="social-links">
-                        <a href="#"><i class="https://www.facebook.com/share/1F4QJFfvfo/?mibextid=wwXIfr"></i></a>
-                        <a href="#"><i class="https://www.instagram.com/asociacionapapacho?igsh=MWx2NWxiODcyM29tNA=="></i></a>
-                        <a href="#"><i class="https://youtube.com/@asociacionapapacho3048?feature=shared"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
